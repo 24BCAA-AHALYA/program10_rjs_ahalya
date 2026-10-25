@@ -1,24 +1,19 @@
-
-import React, { useState } from 'react';
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
+ const [count, setCount] = useState(0);
   return (
-    <div>
-      <h1>Counter Application</h1>
-      <p>Count : {count}</p>
-
-      <button onClick={() => setCount(count + 1)}>
-        Increment
-      </button>
-
-      <br />
-      <br />
-
-      <button onClick={() => setCount(count - 1)}>
-        Decrement
-      </button>
+    <div className="App">
+      <h2>You clicked the button {count} of times</h2>
+        
+       <button type="button" className="btn btn-primary" onClick={() => setCount(count + 1)}>
+                Increment
+            </button>
+            
+            <button  type="button" className="btn btn-danger" onClick={() => setCount(count - 1)}>
+                Decrement
+            </button>
     </div>
   );
 }
